@@ -15,10 +15,9 @@ class principal_window :
         self.buttonFrame.columnconfigure(0 , weight=1)
         self.buttonFrame.columnconfigure(1 , weight=1)
         self.buttonFrame.columnconfigure(2 , weight=1)
-        
+    
         self.btn1 = tk.Button(self.buttonFrame , text="Story 1" , font=("Arial" , 16) , command=self.show_Entry_window_1)
         self.btn1.grid(row=0 , column=0 , sticky=tk.W+tk.E)
-
         self.btn2 = tk.Button(self.buttonFrame , text=("Story 2") , font=("Arial" , 16) ,  command=self.show_Entry_window_2)
         self.btn2.grid(row=0 , column=1 ,sticky=tk.W+tk.E)
         self.btn3 = tk.Button(self.buttonFrame , text="Story 3" , font=("Arial" , 16) , command=self.show_Entry_window_3)
@@ -41,7 +40,7 @@ class principal_window :
         label1.grid(row=0 , column=0 , sticky=tk.W+tk.E)
         textEnter11 = tk.Entry(button_enter_Frame)
         textEnter11.grid(row=0 , column=1 , sticky=tk.W+tk.E)
-       
+
         label2 = tk.Label(button_enter_Frame , text="enter a preson name :" , font="Arial")
         label2.grid(row=1 , column=0 , sticky=tk.W+tk.E)
         textEnter21 = tk.Entry(button_enter_Frame)
@@ -67,11 +66,10 @@ class principal_window :
         textEnter61 = tk.Entry(button_enter_Frame)
         textEnter61.grid(row=5 , column=1 , sticky=tk.W+tk.E)
         button_enter_Frame.pack()
-
         button = tk.Button(root , text="Submit" , font=("Arial" , 18) , command=self.Text_show_window_1)
         button.pack()
-
         root.mainloop()
+
     def show_Entry_window_2(self):
         root = tk.Tk()
 
@@ -118,13 +116,11 @@ class principal_window :
         button.pack()
 
         root.mainloop()
-    
+
     def show_Entry_window_3(self):
         root = tk.Tk()
-
         root.title("story")
         root.geometry("300x200")
-
         button_enter_Frame = tk.Frame(root)
         button_enter_Frame.columnconfigure(0 , weight=1)
         button_enter_Frame.columnconfigure(1 , weight=1)
@@ -160,7 +156,6 @@ class principal_window :
         textEnter63 = tk.Entry(button_enter_Frame)
         textEnter63.grid(row=5 , column=1 , sticky=tk.W+tk.E)
         button_enter_Frame.pack()
-
         button = tk.Button(root , text="Submit" , font=("Arial" , 18) , command=self.Text_show_window_3)
         button.pack()
 
