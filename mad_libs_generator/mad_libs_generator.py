@@ -3,14 +3,10 @@ import tkinter as tk
 class principal_window :
     def __init__(self) :
         self.root = tk.Tk()
-        
         self.root.title("Mad Libs Genarator")
-
         self.root.geometry("400x200")
-
         self.label1= tk.Label(self.root , text="Mad Libs Game" , font=("Italic" , 30) , foreground="blue")
         self.label1.pack(padx=10 )
-
 
         self.label2= tk.Label(self.root , text="Choose Your Favorite Story :" , font=("Bold", 20) , background="yellow" , foreground="black")
         self.label2.pack(padx=10 , pady=10)
@@ -20,7 +16,6 @@ class principal_window :
         self.buttonFrame.columnconfigure(1 , weight=1)
         self.buttonFrame.columnconfigure(2 , weight=1)
         
-
         self.btn1 = tk.Button(self.buttonFrame , text="Story 1" , font=("Arial" , 16) , command=self.show_Entry_window_1)
         self.btn1.grid(row=0 , column=0 , sticky=tk.W+tk.E)
 
@@ -28,15 +23,12 @@ class principal_window :
         self.btn2.grid(row=0 , column=1 ,sticky=tk.W+tk.E)
         self.btn3 = tk.Button(self.buttonFrame , text="Story 3" , font=("Arial" , 16) , command=self.show_Entry_window_3)
         self.btn3.grid(row=0 , column=2 , sticky=tk.W+tk.E)
-
-
         self.buttonFrame.pack(fill="both")
 
         self.root.mainloop()
 
     def show_Entry_window_1(self):
         root = tk.Tk()
-
         root.title("story")
         root.geometry("300x200")
 
@@ -45,12 +37,11 @@ class principal_window :
         button_enter_Frame.columnconfigure(1 , weight=1)
 
         global textEnter11 , textEnter21 , textEnter31 , textEnter41 , textEnter51 , textEnter61
-
         label1 = tk.Label(button_enter_Frame , text="enter adjective :" , font="Arial")
         label1.grid(row=0 , column=0 , sticky=tk.W+tk.E)
         textEnter11 = tk.Entry(button_enter_Frame)
         textEnter11.grid(row=0 , column=1 , sticky=tk.W+tk.E)
-
+       
         label2 = tk.Label(button_enter_Frame , text="enter a preson name :" , font="Arial")
         label2.grid(row=1 , column=0 , sticky=tk.W+tk.E)
         textEnter21 = tk.Entry(button_enter_Frame)
@@ -75,17 +66,12 @@ class principal_window :
         label61.grid(row=5 , column=0 , sticky=tk.W+tk.E)
         textEnter61 = tk.Entry(button_enter_Frame)
         textEnter61.grid(row=5 , column=1 , sticky=tk.W+tk.E)
-
-
         button_enter_Frame.pack()
 
         button = tk.Button(root , text="Submit" , font=("Arial" , 18) , command=self.Text_show_window_1)
         button.pack()
 
         root.mainloop()
-
-
-
     def show_Entry_window_2(self):
         root = tk.Tk()
 
@@ -97,7 +83,6 @@ class principal_window :
         button_enter_Frame.columnconfigure(1 , weight=1)
 
         global textEnter12 , textEnter22 , textEnter32 , textEnter42 , textEnter52 , textEnter62
-
         label1 = tk.Label(button_enter_Frame , text="enter adjective :" , font="Arial")
         label1.grid(row=0 , column=0 , sticky=tk.W+tk.E)
         textEnter12 = tk.Entry(button_enter_Frame)
@@ -127,8 +112,6 @@ class principal_window :
         label6.grid(row=5 , column=0 , sticky=tk.W+tk.E)
         textEnter62 = tk.Entry(button_enter_Frame)
         textEnter62.grid(row=5 , column=1 , sticky=tk.W+tk.E)
-
-
         button_enter_Frame.pack()
 
         button = tk.Button(root , text="Submit" , font=("Arial" , 18) , command=self.Text_show_window_2)
@@ -136,8 +119,6 @@ class principal_window :
 
         root.mainloop()
     
-
-
     def show_Entry_window_3(self):
         root = tk.Tk()
 
@@ -149,7 +130,6 @@ class principal_window :
         button_enter_Frame.columnconfigure(1 , weight=1)
 
         global textEnter13 , textEnter23 , textEnter33 , textEnter43 , textEnter53 , textEnter63
-
         label1 = tk.Label(button_enter_Frame , text="enter adjective :" , font="Arial")
         label1.grid(row=0 , column=0 , sticky=tk.W+tk.E)
         textEnter13 = tk.Entry(button_enter_Frame)
@@ -179,16 +159,12 @@ class principal_window :
         label6.grid(row=5 , column=0 , sticky=tk.W+tk.E)
         textEnter63 = tk.Entry(button_enter_Frame)
         textEnter63.grid(row=5 , column=1 , sticky=tk.W+tk.E)
-
-
         button_enter_Frame.pack()
 
         button = tk.Button(root , text="Submit" , font=("Arial" , 18) , command=self.Text_show_window_3)
         button.pack()
 
         root.mainloop()
-
-
 
     def Text_show_window_1(self):
         self.root = tk.Tk()
@@ -210,8 +186,6 @@ bringing its lively spirit to life' , font=("Bold") , justify="left")
  As the salty breeze tousled his sun-kissed hair,\nhe {textEnter62.get()} the freedom of the ocean and savored the tangy freshness of a perfectly ripe {textEnter52.get()},\na tropical delight that {textEnter32.get()} the paradise surrounding him.' , font=("Bold") , justify="left")
         self.LABEL.pack(fill="both")
         self.root.mainloop()
-
-
         
     def Text_show_window_3(self):
         self.root = tk.Tk()
@@ -226,7 +200,5 @@ a mouthwatering banquet of succulent roasted lamb, tender and bursting with flav
 strength for the challenges that lay ahead.' , font=("Bold") , justify="left")
         self.LABEL.pack(fill="both")
         self.root.mainloop()
-
-
 
 principal_window()
